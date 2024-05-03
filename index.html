@@ -28,7 +28,22 @@
       });
     </script>
 
-    <!-- Task_3-->
+   <!-- Task_3-->
+   <h3>header1</h3>
+   <div>text1</div>
+   <h3>header2</h3>
+   <div>text2</div>
+
+   <script>
+      $(document).ready(function(){
+         $('h3').each(function() {
+            $(this).nextUntil('h3', 'div').insertBefore($(this));
+         });
+      });
+
+   </script>
+
+   <!-- Task_4-->
    <input type="checkbox" class="checkbox">
    <input type="checkbox" class="checkbox">
    <input type="checkbox" class="checkbox">
