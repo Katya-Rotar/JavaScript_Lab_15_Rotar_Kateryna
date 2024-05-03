@@ -27,5 +27,26 @@
          $('h2.head .inner').css('font-size', '35px');
       });
     </script>
+
+    <!-- Task_3-->
+   <input type="checkbox" class="checkbox">
+   <input type="checkbox" class="checkbox">
+   <input type="checkbox" class="checkbox">
+   <input type="checkbox" class="checkbox">
+   <input type="checkbox" class="checkbox">
+   <input type="checkbox" class="checkbox">
+
+   <script>
+      $(document).ready(function(){
+         let checkboxes = $('.checkbox');
+
+         checkboxes.on('change', function() {
+            let checkedCount = checkboxes.filter(':checked').length;
+            if (checkedCount >= 3) {
+               checkboxes.prop('disabled', true);
+            }
+         });
+      });
+   </script>
 </body>
 </html>
