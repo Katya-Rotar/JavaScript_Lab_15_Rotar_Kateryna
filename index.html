@@ -85,5 +85,22 @@
       console.log(name4);
       console.log(age4);
    </script>
+
+   <!-- Task_7-->
+   <script>
+      function mul(...args) {
+         let hasNumber = false;
+         let result = 1;
+         for(let arg of args){
+            if (typeof arg === 'number'){
+               hasNumber = true;
+               result *=arg;
+            }
+         }
+         return hasNumber ? result : 0;
+      }
+      console.log(mul(1, "str", 2, 3, true));
+      console.log(mul(null, "str", false, true));
+   </script>
 </body>
 </html>
